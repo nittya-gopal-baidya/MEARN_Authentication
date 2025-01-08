@@ -1,3 +1,18 @@
 
 The {} in import { MailtrapClient } from "mailtrap" are used because MailtrapClient is being imported as a named export from the mailtrap module.
 In JavaScript, modules can export multiple entities by their names using named exports. When you import a specific named export, you must wrap it in curly braces {} to indicate you're importing that exact item by name
+
+For authentication functions and states we use "zustand" inside frontend
+npm i zustand
+  zustand is going to be our state management Library
+  we create all states and funstions needed for 
+  authentication in one place is this authStore file
+  Global state management sol for us 
+ Axios is a promise-based HTTP client for JavaScript that simplifies making requests to APIs and handling responses.
+
+ CORS (Cross-Origin Resource Sharing) is a security feature in web browsers that allows or restricts resources on a web page to be requested from another domain outside the domain from which the resource originated.
+
+ CORS (Cross-Origin Resource Sharing) is a security feature in web browsers that allows or restricts resources on a web page to be requested from another domain outside the domain from which the resource originated.In simple words, browser feature that controls how resources can be requested from a different domain, ensuring secure interactions between websites.
+ inside MERN_AUTHENTICATION and outside of backend we install cors 
+ npm i cors 
+ 
