@@ -1,0 +1,3 @@
+
+The {} in import { MailtrapClient } from "mailtrap" are used because MailtrapClient is being imported as a named export from the mailtrap module.
+In JavaScript, modules can export multiple entities by their names using named exports. When you import a specific named export, you must wrap it in curly braces {} to indicate you're importing that exact item by name
