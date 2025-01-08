@@ -69,4 +69,4 @@ const SignUpPage = () => {
 		</div>
 	);
 };
-export default SignUpPage; nittya
+export default SignUpPage;
