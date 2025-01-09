@@ -49,6 +49,8 @@ function App() {
           <Route path="/verify-email" element={<VerifyEmailPage/>} />
           <Route path="/forgot-password" element={<RedirectAuthenticatedUser><ForgotPasswordPage/></RedirectAuthenticatedUser>} />
           <Route path="/reset-password/:token" element ={<RedirectAuthenticatedUser><ResetPasswordPage/></RedirectAuthenticatedUser>}/>
+          <Route path="*" element ={<Navigate to="/" replace/>}/>
+        
         </Routes>
         <Toaster/>
       </div>
