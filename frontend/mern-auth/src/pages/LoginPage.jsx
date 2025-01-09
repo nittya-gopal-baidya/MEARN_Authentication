@@ -2,12 +2,20 @@ import { useState } from 'react'
 import {User,Mail,Lock,Loader} from 'lucide-react'
 import {Link} from 'react-router-dom';
 import Input from '../components/Input';
+import { useAuthStore } from '../store/authStore';
 const LoginPage=()=> {
-  const isLoading=false;
+  // const isLoading=false;
    const [email,setEmail]=useState("");
    const [password,setPassword]=useState("");
-    const handleLogin =(e)=>{
+   const {login,isLoading,error}=useAuthStore();
+    const handleLogin =async (e)=>{
       e.preventDefault();
+      try {
+        await login(email,password);
+        //navigate("/login");
+      } catch (error) {
+        console.log(error);
+      }
     }
   return (
     <div className='max-w-md  bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-2xl shadow-xl 
@@ -32,6 +40,8 @@ const LoginPage=()=> {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          {error && <p className='text-red-500 font-semibold mt-2'>{error}</p>}
+					
           <button
                       className="mt-5 w-full py-3 px-4 bg-gradient-to-r from-blue-500 to-emerald-600 text-white 
                       font-bold rounded-lg shadow-lg hover:from-blue-600
