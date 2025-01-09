@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import LoadingSpinner from './components/LoadingSpinner';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
 //Protected route that require authentications
 const ProtectRoute=({children})=>{
   const {isAuthenticated,user}=useAuthStore();
