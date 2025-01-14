@@ -64,4 +64,5 @@ Contributions are welcome! Please fork the repository and create a pull request 
 Author: Nittya Gopal Baidya
 Email: mrnittya@gmail.com
 GitHub: nittya-gopal-baidya
+Live link: https://mern-authentication-cz1u.onrender.com/
 
